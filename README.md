@@ -93,14 +93,27 @@ This method is designed to lower the cost of adapting models to under-served or 
 
 ## Citation
 
-A camera-ready citation will be added once available. In the meantime:
+If you find our work useful, please cite our paper:
 
 ```bibtex
-@inproceedings{galatolo2026lowresource,
-  title     = {Low-Resource Preference Adaptation of {LLM}s via Activation-Based Label Propagation},
-  author    = {Galatolo, Alessio and Beloucif, Meriem},
-  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  year      = {2026}
+@inproceedings{galatolo-beloucif-2026-low,
+    title = "Low-Resource Preference Adaptation of {LLM}s via Activation-Based Label Propagation",
+    author = "Galatolo, Alessio  and
+      Beloucif, Meriem",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Junyi Jessy  and
+      Elliott, Desmond",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-main.2131/",
+    doi = "10.18653/2026.emnlp-main.2131",
+    pages = "48454--48471",
+    ISBN = "979-8-89176-459-0",
+    abstract = "Adapting large language models to user-specific preferences is often constrained by the cost of human annotation, making preference optimisation impractical in low-resource settings where preferences cannot be reliably labelled by LLMs themselves, e.g., due to cultural, subjective, or personalised contexts. In this paper, we investigate how language models encode preference information in their intermediate representations, finding that activations from chosen and rejected responses form distinct clusters across layers, even in pretrained models. Strikingly, this structure is strengthened by alignment on canonical datasets but erased when the target preferences differ from those the model was aligned on, suggesting aligned LLMs are poor judges for non-mainstream populations. Exploiting this structure, we propose training a lightweight linear probe on a few labelled preference pairs ($\leq$500) and using it to annotate large unlabelled datasets (50K+) for downstream preference optimisation. We systematically evaluate this approach across different datasets, preference optimisation methods and model scales and find that our method consistently outperforms direct training given the same annotation budget, and remains competitive against baselines trained on $50-100\times$ more labelled data in the majority of our settings."
 }
 ```
 
